@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>conversion de grados</title>
+</head>
+<body class="body12">
+            {% extends "layout.html" %}
+            {% block content %}
+            
+            <center>
+                <!-- <h1 class="">Calcular grados Fahrenheit a Centígrados</h1> -->
+                <section class="t1">
+                    <h2 class="neon1">
+                        Calcular grados Fahrenheit a Centígrados
+                    </h2>
+                  </section>
+                <div class="inputs">
+                    <form action="/ej2" method="post">
+                        <label for="fahrenheit">Grados Fahrenheit:</label>
+                        <input type="number" id="fahrenheit" name="fahrenheit">
+                        <br><br>
+                        <button type="submit">Convertir</button>
+                    </form>
+    
+                    {% if c %}
+                        <p style="color: white;">Los grados Centígrados son: {{ c }}</p>
+                    {% endif %}
+            
+                    {% if error %}
+                        <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+                        {% endblock %}
+                </div>
+             
+            </center>
+
+     
+  
+</body>
+</html>

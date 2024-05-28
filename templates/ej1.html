@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcular Área de un Triángulo</title>
+</head>
+<body class="body12">
+            {% extends "layout.html" %}
+            {% block content %}
+            
+            <center>
+                <!-- <h1 class="">Calcular Área de un Triángulo</h1> -->
+                <section class="t1">
+                    <h2 class="neon1">
+                        Calcular Área de un Triángulo
+                    </h2>
+                  </section>
+                <div class="inputs">
+                    <form action="/ej1" method="post">
+                        <label for="base">Base: </label>
+                        <input type="number" id="base" name="base">
+                        <br>
+                        <label for="altura">Altura:</label>
+                        <input type="number" id="altura" name="altura">
+                        <br><br>
+                        <button type="submit">Calcular Área</button>
+                    </form>
+    
+                    {% if area %}
+                        <p style="color: white;">El área del triángulo es: {{ area }}</p>
+                    {% endif %}
+            
+                    {% if error %}
+                        <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+                        {% endblock %}
+                </div>
+             
+            </center>
+  
+</body>
+</html>
+

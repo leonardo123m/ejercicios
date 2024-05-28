@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>calificaciones</title>
+</head>
+<body class="body12">
+            {% extends "layout.html" %}
+            {% block content %}
+            <center>
+                <!-- <h1 class="">Ver calificacion</h1> -->
+                <section class="t1">
+                    <h2 class="neon1">
+                        Ver calificacion
+                    </h2>
+                  </section>
+                <div class="inputs">
+                    <form action="/ej3" method="post">
+                        <label for="cal">Ingrese la calificacion:</label>
+                        <input type="number" id="cal" name="cal">
+                        <br><br>
+                        <button type="submit">Ver aprobacion</button>
+                    </form>
+    
+                    {% if cal %}
+                    {% if cal <= 5 %}
+                        <p>{{ mensaje }}</p>
+                    {% elif cal==6 %}
+                        <p>{{ mensaje }}</p>
+                    {% elif cal==6 %}
+                        <p>{{ mensaje }}</p>
+                    {% elif cal==7 %}
+                        <p>{{ mensaje }}</p>
+                    {% elif cal==8 %}
+                        <p>{{ mensaje }}</p>
+                    {% elif cal==9 %}
+                        <p>{{ mensaje }}</p>
+                    {% elif cal==10 %}
+                        <p>{{ mensaje }}</p>
+                    {% endif %}
+                    
+                    {% endif %}
+                    {% if error %}
+                        <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+                        {% endblock %}
+                </div>
+             
+            </center>
+
+     
+  
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla de mult</title>
+</head>
+<body class="body12">
+            {% extends "layout.html" %}
+            {% block content %}
+            <center>
+                <!-- <h1 class="">Tabla de multiplicar</h1> -->
+                <section class="t1">
+                    <h2 class="neon1">
+                        Tabla de multiplicar
+                    </h2>
+                  </section>
+                <div class="inputs">
+                    <form action="/ej5" method="post">
+                        <label for="n">Ingrese el numero :</label>
+                        <input type="number" id="n" name="n">
+                        <br><br>
+                        <button type="submit">Ver tabla</button>
+                    </form>
+                </div>
+              
+                <ul class="ult">
+                    {% for fila in t %}
+                        <li>{{ fila }}</li>
+                    {% endfor %}
+                </ul>
+
+                {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                {% endif %}
+               
+             
+            </center>
+            {% endblock %}
+</body>
+</html>

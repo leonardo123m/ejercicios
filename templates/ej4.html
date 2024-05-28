@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Viaje</title>
+</head>
+<body class="body12">
+    {% extends "layout.html" %}
+    {% block content %}
+    <center>
+        <!-- <h1 class="">Viaje</h1> -->
+        <section class="t1">
+            <h2 class="neon1">
+                Viaje
+            </h2>
+          </section>
+        <div class="inputs">
+            <form action="/ej4" method="post">
+                <label for="al">Ingrese la cantidad de alumnos:</label>
+                <input type="number" id="al" name="al">
+                <br><br>
+                <button type="submit">Ver costos</button>
+            </form>
+             {% if pa %}
+                <h1 class="ha">{{ pa }}
+                    <br><br>
+                    {{ au }}
+                </h1>
+             {% endif %}
+
+             {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+        </div>
+    </center>
+    {% endblock %}
+</body>
+</html>
